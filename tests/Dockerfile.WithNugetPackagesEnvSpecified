@@ -1,0 +1,9 @@
+ARG IMAGE_NAME=mcr.microsoft.com/dotnet/sdk:6.0
+FROM $IMAGE_NAME AS build
+WORKDIR /src
+ENV NUGET_PACKAGES=/a/1/.nuget/packages/
+RUN mkdir -p /a/1/.nuget/packages/
+
+COPY . ./
+RUN dotnet restore --packages /a/1/.nuget/packages/
+RUN dotnet build --no-restore -c Release Mongo2GoE2ETests.sln

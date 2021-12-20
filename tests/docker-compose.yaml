@@ -1,0 +1,24 @@
+version: "3.8"
+services:
+  mongo2go-lates-version-bionic:
+    build:
+      context: .
+      args:
+        IMAGE_NAME: "mcr.microsoft.com/dotnet/sdk:6.0"
+  mongo2go-lates-version-focal:
+    build:
+      context: .
+      args:
+        IMAGE_NAME: "mcr.microsoft.com/dotnet/sdk:6.0-focal"
+  mongo2go-lates-version-with-env-specified-bionic:
+    build:
+      context: .
+      dockerfile: Dockerfile.WithNugetPackagesEnvSpecified
+      args:
+        IMAGE_NAME: "mcr.microsoft.com/dotnet/sdk:6.0"
+  mongo2go-lates-version-with-env-specified-focal:
+    build:
+      context: .
+      dockerfile: Dockerfile.WithNugetPackagesEnvSpecified
+      args:
+        IMAGE_NAME: "mcr.microsoft.com/dotnet/sdk:6.0-focal"
