@@ -2,7 +2,7 @@ using Mongo2Go;
 using MongoDB.Driver;
 using Xunit;
 
-namespace Mongo2GoE2ETests
+namespace Mongo2GoE2ETestsLocal
 {
     public class SimpleMongoDbRunnerTests
     {

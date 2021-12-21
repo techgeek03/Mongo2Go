@@ -4,6 +4,8 @@
 # Allow files and directories
 !Mongo2GoE2ETests.sln
 !Mongo2GoE2ETests/**
+!src/**
+!tests/**
 !global.json
 
 # Ignore unnecessary files inside allowed directories
