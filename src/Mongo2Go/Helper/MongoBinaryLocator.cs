@@ -13,10 +13,10 @@ namespace Mongo2Go.Helper
         private readonly string _nugetCachePrefix = Path.Combine("packages", "mongo2go", "*");
         private readonly string _nugetCacheBasePrefix = Path.Combine("mongo2go", "*");
         public const string DefaultWindowsSearchPattern = @"tools\mongodb-windows*\bin";
-        public const string DefaultLinuxSearchPattern = "*/tools/mongodb-linux*/bin";
+        public const string DefaultLinuxSearchPattern = "tools/mongodb-linux*/bin";
         public const string DefaultOsxSearchPattern = "tools/mongodb-macos*/bin";
         public const string WindowsNugetCacheLocation = @"%USERPROFILE%\.nuget\packages";
-        public static readonly string OsxAndLinuxNugetCacheLocation = Environment.GetEnvironmentVariable("HOME") + "/.nuget/packages/mongo2go";
+        public static readonly string OsxAndLinuxNugetCacheLocation = Environment.GetEnvironmentVariable("HOME") + "/.nuget/packages";
         private string _binFolder = string.Empty;
         private readonly string _searchPattern;
         private readonly string _nugetCacheDirectory;
